@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valuta il Tuo Immobile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8d1; /* Sfondo chiaro RAL 1003 */
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #ffcc00; /* RAL 1003 */
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    p {
+      text-align: center;
+      font-size: 1.1em;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 15px;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #333;
+    }
+    .whatsapp-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #25d366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .whatsapp-link:hover {
+      background-color: #1da851;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Valutazione Gratuita del Tuo Immobile</h1>
+    <p>Compila il modulo sottostante per ricevere una valutazione precisa e senza impegno!</p>
+    <form action="https://formspree.io/f/myzyvvwq" method="POST">
+      <label for="name">Nome e Cognome:</label>
+      <input type="text" id="name" name="name" placeholder="Inserisci il tuo nome completo" required>
+
+      <label for="phone">Numero di Telefono (obbligatorio):</label>
+      <input type="tel" id="phone" name="phone" placeholder="Es: 3451234567" required>
+
+      <label for="address">Indirizzo (via, numero civico o zona):</label>
+      <input type="text" id="address" name="address" placeholder="Es: Via Roma, 10" required>
+
+      <label for="size">Dimensioni dell'Appartamento (in mq):</label>
+      <input type="number" id="size" name="size" placeholder="Es: 100" required>
+
+      <label for="condition">Stato dell'Immobile:</label>
+      <select id="condition" name="condition" required>
+        <option value="" disabled selected>Seleziona una opzione</option>
+        <option value="ristrutturato">Ristrutturato</option>
+        <option value="parzialmente-ristrutturato">Parzialmente Ristrutturato</option>
+        <option value="da-ristrutturare">Da Ristrutturare</option>
+      </select>
+
+      <label for="bedrooms">Numero di Camere da Letto:</label>
+      <input type="number" id="bedrooms" name="bedrooms" placeholder="Es: 3" required>
+
+      <label for="bathrooms">Numero di Bagni:</label>
+      <input type="number" id="bathrooms" name="bathrooms" placeholder="Es: 2" required>
+
+      <label for="garage">Box Auto:</label>
+      <select id="garage" name="garage" required>
+        <option value="" disabled selected>Seleziona una opzione</option>
+        <option value="si">Sì</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="cellar">Cantina:</label>
+      <select id="cellar" name="cellar" required>
+        <option value="" disabled selected>Seleziona una opzione</option>
+        <option value="si">Sì</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="type">Tipologia di Immobile:</label>
+      <select id="type" name="type" required>
+        <option value="" disabled selected>Seleziona una opzione</option>
+        <option value="appartamento">Appartamento</option>
+        <option value="casa-singola">Casa Singola</option>
+        <option value="villetta-a-schiera">Villetta a Schiera</option>
+      </select>
+
+      <label for="elevator">Ascensore:</label>
+      <select id="elevator" name="elevator" required>
+        <option value="" disabled selected>Seleziona una opzione</option>
+        <option value="si">Sì</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="notes">Note Aggiuntive:</label>
+      <textarea id="notes" name="notes" rows="5" placeholder="Inserisci qui ulteriori dettagli"></textarea>
+
+      <button type="submit">Invia Richiesta</button>
+    </form>
+    <div class="footer">
+      <p>Hai altre domande? <a class="whatsapp-link" href="https://wa.me/3492308435" target="_blank">Contattami su WhatsApp</a></p>
+    </div>
+  </div>
+</body>
+</html>
